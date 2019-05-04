@@ -16,16 +16,12 @@ function start() {
 start();
 
 function pause() {
-    pauseButton.addEventListener('click', function() {
-        console.log("pause");
-        clearInterval(timerId);
-    });
+    pauseButton.addEventListener('click', () => clearInterval(timerId));
 }
 pause();
 
 function stop() {
     stopButton.addEventListener('click', function() {
-        console.log("stop");
         clearInterval(timerId);
         display.textContent = 25;
     });
