@@ -4,8 +4,10 @@ let secDisplay = document.querySelector('#secs');
 let startButton = document.querySelector('#play-btn');
 let pauseButton = document.querySelector('#pause-btn');
 let stopButton = document.querySelector('#stop-btn');
-let time = 300;
+let status = document.querySelector('#status');
+let time = 15;
 let timerId;
+let onBreak = false;
 
 function displayTime() {
     let mins = Math.floor(time / 60);
@@ -15,7 +17,7 @@ function displayTime() {
     minDisplay.textContent = mins;
     secDisplay.textContent = secs;
 }
-displayTime();
+
 
 function convertSingleDigit(num) {
     return "0" + num;
@@ -24,6 +26,18 @@ function convertSingleDigit(num) {
 function countDown() {
     time--;
     displayTime();
+    if (time === 0 && onBreak === false) breakTime();
+    if (time === 0 && onBreak === true) {
+        time = 15;
+        onBreak = false;
+        statusText();
+    }
+}
+
+function breakTime() {
+    time = 5;
+    onBreak = true;
+    statusText();
 }
 
 function start() {
@@ -39,13 +53,22 @@ pause();
 function stop() {
     stopButton.addEventListener('click', function() {
         clearInterval(timerId);
-        time = 300;
+        time = 15;
         displayTime();
+        status.textContent = "Work, Work, Work, Work, Work";
     });
 }
 stop();
 
 function startTimer() {
     timerId = setInterval(countDown, 1000);
+}
+
+function statusText() {
+    if (onBreak) {
+        status.textContent = "On a break."
+    } else {
+        status.textContent = "On it!"
+    }
 }
 
