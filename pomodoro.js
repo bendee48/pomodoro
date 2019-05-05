@@ -22,8 +22,8 @@ function convertSingleDigit(num) {
 }
 
 function countDown() {
-    displayTime();
     time--;
+    displayTime();
 }
 
 function start() {
