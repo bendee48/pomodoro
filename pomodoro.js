@@ -11,6 +11,7 @@ const sessionDown = document.querySelector('#session-down');
 const breakDisplay = document.querySelector('#break-time');
 const breakIncrease = document.querySelector('#break-up');
 const breakDecrease = document.querySelector('#break-down');
+const audio = new Audio('beep-08b.mp3');
 
 let breakLength = 60;
 let time = 60;
@@ -82,6 +83,7 @@ function countDown() {
     timeRunning = true;
     time--;
     displayTime();
+    if (time <= 10) audio.play();
     if (time === 0 && onBreak === false) breakTime();
     if (time === 0 && onBreak === true) {
         time = currentTime;
