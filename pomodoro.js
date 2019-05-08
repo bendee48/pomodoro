@@ -83,7 +83,7 @@ function countDown() {
     timeRunning = true;
     time--;
     displayTime();
-    if (time <= 10) audio.play();
+    if (time <= 5) audio.play();
     if (time === 0 && onBreak === false) breakTime();
     if (time === 0 && onBreak === true) {
         time = currentTime;
