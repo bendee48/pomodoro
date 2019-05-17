@@ -7,28 +7,34 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Pomodoro</h1>
+        <h1>Pomodoro Clock</h1>
         <main>
             <div id="timer-main">
-                <h2 id="status">Work, Work, Work, Work, Work</h2>
+                <h2 id="status">Let's get to work!</h2>
                 <div id="timer-display">
-                    <span id="mins">04</span>
+                    <span id="mins"></span>
                     <span>:</span>
                     <span id="secs"></span>
                 </div>
-                <button id="play-btn">Play</button>
-                <button id="pause-btn">Pause</button>
-                <button id="stop-btn">Stop</button>
+                <div id="buttons">
+                    <button class="button-style" id="play-btn">Play</button>
+                    <button class="button-style" id="pause-btn">Pause</button>
+                    <button class="button-style" id="stop-btn">Stop</button>
+                </div>
             </div>
             <div id="timer-length">
-                <p>Session</p>
-                <span id="session-down"><</span>
-                <span id="session-time"></span>
-                <span id="session-up">></span>
-                <p>Break</p>
-                <span id="break-down"><</span>
-                <span id="break-time"></span>
-                <span id="break-up">></span>
+                <div id="session-div">
+                    <p>Session</p>
+                    <div id="session-down"><</div>
+                    <div id="session-time"></div>
+                    <div id="session-up">></div>
+                </div>
+                <div id="break-div">
+                    <p>Break</p>
+                    <div id="break-down"><</div>
+                    <div id="break-time"></div>
+                    <div id="break-up">></div>
+                </div>               
             </div>
         </main>
 

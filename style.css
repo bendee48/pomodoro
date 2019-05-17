@@ -1,8 +1,104 @@
+* {
+  font-family: Calibri, Sans-serif;
+}
+
 body {
-    background-color: bisque;
+  background-color: #f1f1f1;
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 0 50px 0;
+  background-color: #f4f6ff;
+  box-shadow: 6px 6px #c6c6c6;
+}
+
+#status {
+  font-size: 2.5em;
+  font-style: italic;
+}
+
+/* Timer Display*/
+
+#timer-main {
+  padding-bottom: 30px;
+} 
+
+#timer-main h2 {
+  text-align: center;
+}
+
+#timer-display {
+  text-align: center;
+  font-size: 5.5em;
+  padding-bottom: 30px;
+}
+
+/*Main Buttons*/
+
+#buttons {
+  text-align: center;
+}
+
+.button-style {
+  width: 100px;
+  margin: 0 20px;
+  border: none;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-style:hover {
+  opacity: 0.8;
+  -ms-transform: scale(2, 3); /* IE 9 */
+  -webkit-transform: scale(2, 3); /* Safari */
+  transform: scale(1.05, 1.05);
+}
+
+#play-btn {
+  background-color: #abef67;
+}
+
+#stop-btn {
+  background-color: #d67c7c;
+}
+
+#pause-btn {
+  background-color: #aeaeae;
+}
+
+
+/*Timer Increase*/
+
+#timer-length {
+  display: flex;
+}
+
+#timer-length div:p {
+  font-size: 1.2em;
+}
+
+#timer-length div {
+  font-size: 1.2em;
+}
+
+#timer-length #session-div div,
+#timer-length #break-div div {
+  display: inline-block;
+  width: 40px;
+}
+
+#session-div, #break-div {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #session-down, #session-up,
 #break-down, #break-up {
-    cursor: pointer;
+  cursor: pointer;
 }
